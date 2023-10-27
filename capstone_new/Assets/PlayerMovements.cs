@@ -1,29 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMovements : MonoBehaviour
 {
+    public float movespeed;
     private Rigidbody2D rb;
-    //int wholeNumber = 16;
-    //float decimalNumber = 4.56f;
+    private bool facingRight = true;
+    private float dirx;
 
-    // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
-        rb=GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
+
+    //private void Start()
+    //{
+        
+    //}
 
     // Update is called once per frame
     private void Update()
     {
-        float dirx = Input.GetAxisRaw("Horizontal");
+        dirx = Input.GetAxisRaw("Horizontal");
         rb.velocity=new Vector2 (dirx*7f,rb.velocity.y);
+
+        if (dirx > 0 && !facingRight)
+        {
+            flipCharacter();
+        }
+        else if (dirx < 0 && facingRight)
+        {
+            flipCharacter();
+        }
 
         if (Input.GetButtonDown("Jump") || Input.GetKey("w"))
         {
             rb.velocity = new Vector3(rb.velocity.x, 6);
         }
- 
+
+    
     }
+
+    private void flipCharacter()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(0f, 180f, 0f);
+    }
+
 }
