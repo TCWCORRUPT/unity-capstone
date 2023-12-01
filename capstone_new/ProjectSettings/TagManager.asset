@@ -50,3 +50,6 @@ TagManager:
   - name: Background
     uniqueID: 640366871
     locked: 0
+  - name: Skybox
+    uniqueID: 4275730417
+    locked: 0
