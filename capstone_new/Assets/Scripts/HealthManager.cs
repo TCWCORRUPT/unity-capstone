@@ -22,11 +22,6 @@ public class HealthManager : MonoBehaviour
             Application.LoadLevel(Application.loadedLevel);
         }
         
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            TakeDamaege(20);
-        }
-
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             heal(5);

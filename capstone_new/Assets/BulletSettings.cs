@@ -16,7 +16,7 @@ public class BulletSettings : MonoBehaviour
         goRight = playerDirection.facingRight;
         Debug.Log(goRight.ToString());
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -34,4 +34,13 @@ public class BulletSettings : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
+        {
+            enemyComponent.TakeDamage(10);
+        }
+    }
+
 }
