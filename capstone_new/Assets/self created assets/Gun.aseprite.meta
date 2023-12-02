@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: dbdd3ef0fc647dc43b5e52b2b5b70bb7
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Gun_Clip
+    second: {fileID: 7400000, guid: 7766f808ec97c574a912a26dbdebf15c, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -95,7 +100,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638370348488209197
+  platformSettingsDirtyTick: 638371648531584862
   textureAssetName: 
   singleSpriteImportData:
   - name: 

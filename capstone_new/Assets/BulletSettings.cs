@@ -8,6 +8,7 @@ public class BulletSettings : MonoBehaviour
     public PlayerMovements playerDirection;
     public float Bullet_Speed = 0.1f;
     public float durationTaken = 0;
+    public int bulletDuration = 0;
     private bool goRight;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class BulletSettings : MonoBehaviour
         }
         
         durationTaken += Time.deltaTime;
-        if (durationTaken > 3)
+        if (durationTaken > bulletDuration)
         {
             Destroy(gameObject);
         }
@@ -41,6 +42,7 @@ public class BulletSettings : MonoBehaviour
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
         {
             enemyComponent.TakeDamage(10);
+            Destroy(gameObject);
         }
     }
 
