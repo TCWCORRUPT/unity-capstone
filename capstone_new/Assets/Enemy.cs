@@ -33,24 +33,23 @@ public class Enemy : MonoBehaviour
             Die();
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<HealthManager>(out HealthManager player))
+        {
+            player.TakeDamaege(10);
+        }
+    }
 
     void Die()
     {
         Destroy(gameObject);
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    healthManager.TakeDamaege(10);
-    //}
     // Update is called once per frame
     void Update()
     {
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        healthManager.TakeDamaege(10);
-    }
 }

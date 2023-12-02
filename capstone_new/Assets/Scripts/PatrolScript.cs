@@ -16,6 +16,7 @@ public class PatrolScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
+        anim.SetBool("isRunning", true);
     }
 
     // Update is called once per frame
