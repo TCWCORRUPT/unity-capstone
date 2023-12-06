@@ -16058,6 +16058,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff5c2172ab15544fb5a933f40d382c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entryPortal: {fileID: 8851003466549334113, guid: e6905b0c496531d4e8a8d00a71a770a1, type: 3}
+  exitPortal: {fileID: 4342099791024724094, guid: ba0cc8ec2da20044fb2fa817edac42ff, type: 3}
 --- !u!4 &710256368
 Transform:
   m_ObjectHideFlags: 0
