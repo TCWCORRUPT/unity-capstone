@@ -8,10 +8,13 @@ public class HealthManager : MonoBehaviour
 
     public Image Healthbar;
     public float healthAmount = 100f;
+    public float freeFallDamage = -20f;
+    private float verticalSpeed;
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -21,7 +24,13 @@ public class HealthManager : MonoBehaviour
         {
             Application.LoadLevel(Application.loadedLevel);
         }
-        
+
+        verticalSpeed = rb.velocity.y;
+        if (verticalSpeed < freeFallDamage)
+        {
+            TakeDamaege(100);
+        }
+
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             heal(5);

@@ -19,6 +19,9 @@ public class PlayerMovements : MonoBehaviour
     private float dirx;
     private bool isGround;
     private int jumpCount;
+    public float freeFallDamage = -20f;
+    private float verticalSpeed;
+    [SerializeField] HealthManager healthManager;
 
     private void Awake()
     {
@@ -45,6 +48,10 @@ public class PlayerMovements : MonoBehaviour
         if(isGround )
         {
             jumpCount = maxJumpCount;
+            if (rb.velocity.y <= -10)
+            {
+                healthManager.TakeDamaege(20);
+            }
         }
         movement();
     }
