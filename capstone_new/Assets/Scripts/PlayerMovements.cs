@@ -30,6 +30,8 @@ public class PlayerMovements : MonoBehaviour
 
     private void Start()
     {
+        flipCharacter();
+        flipCharacter();
         jumpCount = maxJumpCount;
     }
 
