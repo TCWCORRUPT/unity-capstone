@@ -755,7 +755,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2 Dimensional, 2 Gun
+  m_Text: 2-Dimensions, 1 Gun
 --- !u!222 &761769128
 CanvasRenderer:
   m_ObjectHideFlags: 0
