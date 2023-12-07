@@ -13,7 +13,7 @@ public class BulletSettings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerDirection = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovements>();
+        playerDirection = GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerMovements>();
         goRight = playerDirection.facingRight;
         Debug.Log(goRight.ToString());
     }

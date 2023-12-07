@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EntryPortal
   - ExitPortal
+  - Player2
   layers:
   - Default
   - TransparentFX
